@@ -1,5 +1,7 @@
 package project;
 
+import java.io.FileNotFoundException;
+
 //import org.jfree.data.xy.XYDataset;
 
 import project.comparators.*;
@@ -42,5 +44,40 @@ public class Corrida {
     // por ordem crescente de tempo de passagem.
     private final RegistoPassagem[][] registosPassagem;
     
+    public Corrida(String ficheiroListaAtletas, String ficheiroClassificacoes, String ficheiroRegistoPassagens)
+    throws FileNotFoundException {
+        
+    }
+    
+    public Atleta[] getAtletas() {
+        
+    }
+    
+    public Atleta getAtletaPorIndice(int indice) {
 
+    }
+    
+    public RegistoPassagem[][] getRegistosPassagem() {
+
+    }
+    
+    public int getNumeroDeAtletas() {
+
+    }
+    
+    public int getNumeroPostosControlo() {
+
+    }
+    
+    public int[] calculaPosicoesPostos(int dorsal) {
+
+    }
+    
+    public void plotPosicoesPostos(Atleta[] vec) {
+
+    }
+
+    public void plotPosicoesPostos(int[] dorsais) {
+        
+    }
 }
