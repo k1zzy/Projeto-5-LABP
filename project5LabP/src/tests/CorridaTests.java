@@ -21,10 +21,10 @@ public class CorridaTests {
             System.err.println("Pelo menos 1 ficheiro de inicialização não foi encontrado.");
             corrida = null;
         }
-        catch (Exception e) {
-            System.err.println("Algo correu mal na inicialização.");
-            corrida = null;
-        }
+//        catch (Exception e) {
+////            System.err.println("Algo correu mal na inicialização.");
+//            corrida = null;
+//        }
     }
     
     @Test
