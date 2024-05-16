@@ -139,12 +139,12 @@ public class Corrida {
                                 tempo = new Tempo(2023, 9, 3, Integer.parseInt(horaEMinuto[0]), Integer.parseInt(horaEMinuto[1]), 0);
                                 break;
                             }
-                            registoPassagem[i][j] = new RegistoPassagem(Integer.parseInt(campos[0]), tempo.getMinutosEmProva());
+                            registoPassagem[i][atletaIndex] = new RegistoPassagem(Integer.parseInt(campos[0]), tempo.getMinutosEmProva());
                         }
                         else {
-                            registoPassagem[i][j] = new RegistoPassagem(Integer.parseInt(campos[0]), MINUTOS_DE_QUEM_NAO_PASSOU);
+                            registoPassagem[i][atletaIndex] = new RegistoPassagem(Integer.parseInt(campos[0]), MINUTOS_DE_QUEM_NAO_PASSOU);
                         }
-                        temposPassagem[i] = registoPassagem[i][j].getTempoPassagem();
+                        temposPassagem[i] = registoPassagem[i][atletaIndex].getTempoPassagem();
                         j++;
                     }
                     atletas[atletaIndex++].setTemposPassagem(temposPassagem);
@@ -176,8 +176,29 @@ public class Corrida {
         return registosPassagem.length;
     }
     
+    // NMAO SEI PQ EQ AS VEZES E MAIS 1 E AS VEZES MENOS 1 AHHHHHH
     public int[] calculaPosicoesPostos(int dorsal) {
-        return new int[2];
+        int indiceAtleta = indiceAtletaPorDorsalArrayOrdenado(atletas, dorsal);
+        int[] tempos = Arrays.copyOf(atletas[indiceAtleta].getTemposPassagem(), atletas[indiceAtleta].getTemposPassagem().length);
+        
+        tempos[0] = indiceAtleta + 1;
+        
+        for (int j = 1; j < tempos.length; j++) {
+            int posicao = 1;
+            
+            for (int i = 0; i < registosPassagem[0].length; i++) {
+                if (tempos[j] > registosPassagem[j][i].getTempoPassagem()) {
+                    posicao++;
+                }
+            }
+            tempos[j] = posicao;
+        }
+        return tempos;
+    }
+    
+    public static int indiceAtletaPorDorsalArrayOrdenado(Atleta[] vec, int dorsal) {
+        Atleta nomeCerto = new Atleta(dorsal, "nome", "pt", "0");
+        return Arrays.binarySearch(vec, nomeCerto, new ComparaAtletaDorsal());
     }
     
     public void plotPosicoesPostos(Atleta[] vec) {

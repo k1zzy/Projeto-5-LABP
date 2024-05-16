@@ -5,6 +5,7 @@ import java.util.Comparator;
 import java.util.Objects;
 
 import project.comparators.ComparaAtletaNome;
+import project.comparators.ComparaAtletaDorsal;
 
 public class Atleta implements Comparable<Atleta> {
     
