@@ -7,7 +7,7 @@ import java.util.Arrays;
 import java.util.NoSuchElementException;
 import java.util.Scanner;
 
-import project.comparators.ComparaRegistoPassagemTempo;
+import org.jfree.data.xy.XYDataset;
 
 //import org.jfree.data.xy.XYDataset;
 
@@ -137,7 +137,8 @@ public class Corrida {
                 try {
                     campos = sc.nextLine().split(";");
                 }
-                catch (Exception NoSuchElementException) {
+                catch (NoSuchElementException e) {
+                    sc.close();
                     throw new NoSuchElementException();
                 }
                 int nrPostos = campos.length - 3; // -3 pq e o que nao sao postos
@@ -208,10 +209,50 @@ public class Corrida {
     }
     
     public void plotPosicoesPostos(Atleta[] vec) {
+        double[] postos = new double[getNumeroPostosControlo()];
+        XYDataset[] dataset = new XYDataset[vec.length];
+        double[] posicoesDataset = new double[getNumeroPostosControlo()];
 
+        for (int i  = 0; i < getNumeroPostosControlo(); i++) {
+            postos[i] = i+1;
+        }
+        
+        for (int j = 0; j < vec.length; j++) {
+            int[] posicoesPostos = calculaPosicoesPostos(vec[j].getDorsal());
+            
+            for (int k = 0; k < getNumeroPostosControlo(); k++) {
+                posicoesDataset[k] = posicoesPostos[k];
+            }
+            
+            dataset[j] = XYPlotter.createDataset("Atleta " + vec[j].getDorsal(), Arrays.copyOf(postos, postos.length), Arrays.copyOf(posicoesDataset, posicoesDataset.length));
+        }
+        
+        XYPlotter.showXYPlot("Comparação de atletas", "Postos", "Posições", dataset);
     }
 
     public void plotPosicoesPostos(int[] dorsais) {
-        
+//        Atleta[] vec= new Atleta[dorsais.length];
+//        double[] postos = new double[getNumeroPostosControlo()];
+//        XYDataset[] dataset = new XYDataset[vec.length];
+//        double[] posicoesDataset = new double[getNumeroPostosControlo()];
+//        
+//        
+//        for (int i  = 0; i < getNumeroPostosControlo(); i++) {
+//            postos[i] = i+1;
+//        }
+//        
+//        for (int j = 0; j < vec.length; j++) {
+//            Atleta atletaDorsalToComp = new Atleta(dorsais[j], "name", "pt", "0");
+//            vec[j] = atletas[Arrays.binarySearch(vec, atletaDorsalToComp, new ComparaAtletaDorsal())];
+//            int[] posicoesPostos = calculaPosicoesPostos(vec[j].getDorsal());
+//            
+//            for (int k = 0; k < getNumeroPostosControlo(); k++) {
+//                posicoesDataset[k] = posicoesPostos[k];
+//            }
+//            
+//            dataset[j] = XYPlotter.createDataset("Atleta " + vec[j].getDorsal(), Arrays.copyOf(postos, postos.length), Arrays.copyOf(posicoesDataset, posicoesDataset.length));
+//        }
+//        
+//        XYPlotter.showXYPlot("Comparação de atletas", "Postos", "Posições", dataset);
     }
 }

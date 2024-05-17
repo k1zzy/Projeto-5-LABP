@@ -1,0 +1,218 @@
+Array de atletas fictícios inicial:
+6666 - José Ninguém
+5555 - Maria Ninguém
+6000 - José Silva
+1734 - John Doe
+
+Ordenação deste array de atletas por vários critérios:
+
+1734 - John Doe
+5555 - Maria Ninguém
+6000 - José Silva
+6666 - José Ninguém
+
+1734 - John Doe
+5555 - Maria Ninguém
+6000 - José Silva
+6666 - José Ninguém
+
+1734 - John Doe
+6666 - José Ninguém
+6000 - José Silva
+5555 - Maria Ninguém
+
+6000 - José Silva
+1734 - John Doe
+5555 - Maria Ninguém
+6666 - José Ninguém
+
+6000 - José Silva
+1734 - John Doe
+5555 - Maria Ninguém
+6666 - José Ninguém
+
+1734 - John Doe
+6000 - José Silva
+5555 - Maria Ninguém
+6666 - José Ninguém
+
+6000 - José Silva
+6666 - José Ninguém
+5555 - Maria Ninguém
+1734 - John Doe
+
+5555 - Maria Ninguém
+1734 - John Doe
+6000 - José Silva
+6666 - José Ninguém
+
+Pesquisas por nome:
+2
+3
+
+Aplicação de filtros:
+
+6000 - José Silva
+1734 - John Doe
+5555 - Maria Ninguém
+6666 - José Ninguém
+
+6000 - José Silva
+6666 - José Ninguém
+
+6000 - José Silva
+5555 - Maria Ninguém
+6666 - José Ninguém
+
+0
+
+5555 - Maria Ninguém
+
+Número de atletas: 2687
+Número de postos de controlo: 24
+
+Atleta com o índice 1000 na lista de atletas: 1101 - Daniele ROATTINO
+  Dorsal: 1101
+  Nome: Daniele ROATTINO
+  Nacionalidade: ITA (IT)
+  Escalão: 45-49M
+  Posiçao final absoluta: 667
+  Posição final no escalão: 105
+  Tempo na meta: 38 16 55 
+  Tempos de passagem nos postos: 0 107 166 263 374 464 511 639 737 808 845 944 1023 1103 1159 1265 1357 1591 1755 1830 1902 2015 2222 2296 
+
+Primeiros 5 atletas na meta, de acordo com o Registo de Passagem: 
+3
+26
+18
+9
+39
+Atletas a passar em Courmayeur (posto 12) nas posicoes 1001 a 1005,de acordo com o Registo de Passagem: 
+1235
+1575
+2130
+2362
+915
+
+Primeiros 10 atletas na meta, de acordo com o atributo posição final: 
+     Dorsal                      Nome  TempoMeta  Escalão      País PosAbs PosEsc
+   1      3              Jim WALMSLEY   19:37:43   20-34M  USA (US)      1      1
+   2     26               Zach MILLER   19:58:58   35-39M  USA (US)      2      1
+   3     18          Germain GRANGIER   20:10:52   20-34M  FRA (FR)      3      2
+   4      9         Mathieu BLANCHARD   20:54:25   35-39M  FRA (FR)      4      2
+   5     39          Ludovic POMMERET   21: 0:54   45-49M  FRA (FR)      5      1
+   6      7         Thibaut GARRIVIER   21:10:38   20-34M  FRA (FR)      6      3
+   7     29               Tyler GREEN   21:19:21   35-39M  USA (US)      7      3
+   8      8          Hannes NAMBERGER   21:20:46   20-34M  GER (DE)      8      4
+   9     63    Arthur JOYEUX BOUILLON   21:31:22   20-34M  FRA (FR)      9      5
+  10     38        Baptiste CHASSAGNE   21:38:11   20-34M  FRA (FR)     10      6
+
+Posições do atleta com dorsal 700, nos postos sucessivos: 
+623 1779 1645 1625 1555 1539 1425 1470 1415 1352 1343 1160 1164 1154 1139 1111 1096 1041 934 878 828 803 740 723 
+
+Todas as mulheres de 40 a 44 anos, de qualquer nacionalidade: 
+     Dorsal                      Nome  TempoMeta  Escalão      País PosAbs PosEsc
+   1     42     Maite MAIORA ELIZONDO   25: 2:26   40-44W  ESP (ES)     40      1
+   2     43           Ailsa MACDONALD   25:48:54   40-44W  CAN (CA)     50      2
+   3    249             Claire HESLOP   28: 5:39   40-44W  CAN (CA)    106      3
+   4    145              Emily VAUDAN   28:34:53   40-44W  SUI (CH)    120      4
+   5    207       Elisabeth BORGERSEN   30:48: 2   40-44W  NOR (NO)    189      5
+   6    163            Elisabeth RIOS   31:32:32   40-44W  BOL (BO)    217      6
+   7    254         Céline BERNASCONI   31:46:36   40-44W  SUI (CH)    231      7
+   8    246            Katarzyna ZYCH   33:15:41   40-44W  POL (PL)    309      8
+   9    274         Esther O'SULLIVAN   33:54:38   40-44W  IRL (IE)    349      9
+  10    267              Anna O'BYRNE   34:40:33   40-44W  NZL (NZ)    406     10
+  11    261              Helene LEGER   36:29: 6   40-44W  FRA (FR)    529     11
+  12    837                 Erin SHAW   36:29:48   40-44W  USA (US)    531     12
+  13    603             Amy LAMPRECHT   37: 6:25   40-44W  AUS (AU)    573     13
+  14    671      Flora Wing Yee CHING   37: 8:58   40-44W  CAN (CA)    574     14
+  15    794            Laure GAUTHIER   37:21:47   40-44W  FRA (FR)    594     15
+  16    772              Alice FABIEN   37:24:54   40-44W  FRA (FR)    598     16
+  17    612          Meaghan JENNINGS   38:10:45   40-44W  USA (US)    652     17
+  18    757  Benjamas CHOTEMATEEPIROM   38:26: 4   40-44W  THA (TH)    679     18
+  19    256         Gro Siljan HJUKSE   38:26:39   40-44W  NOR (NO)    680     19
+  20    821               Megan LACEY   38:33:16   40-44W  USA (US)    691     20
+  21    692      Cristina PRATS VIDAL   39:39:42   40-44W  ESP (ES)    809     21
+  22    624                  Ting GAO   39:48:16   40-44W  HKG (HK)    830     22
+  23    822             Alison MILLER   39:57:47   40-44W  USA (US)    843     23
+  24   1366          Daniela HOLDENER   40: 3:35   40-44W  SUI (CH)    855     24
+  25   1019             Myriam SAVARY   40:14:46   40-44W  SUI (CH)    871     25
+  26   1400     Anna SOGAARD HANUSOVA   40:46:18   40-44W  CZE (CZ)    927     26
+  27    649              Siok Har LIM   42:33:12   40-44W  MAS (MY)   1129     27
+  28    567              Heidi ROUNDS   42:41:45   40-44W  USA (US)   1144     28
+  29    653         Carissa LIEBOWITZ   42:43:50   40-44W  USA (US)   1148     29
+  30   1549          Johanna BERGLIND   42:59:29   40-44W  FIN (FI)   1187     30
+  31   1123     Palida APICHATAMMARIT   43:10:34   40-44W  THA (TH)   1214     31
+  32   1347              Sarah MUNDAY   43:25:34   40-44W  GBR (GB)   1248     32
+  33   1026 Sandra Erika LOPEZ GARCIA   43:37:32   40-44W  MEX (MX)   1275     33
+  34   1084             Yoonjeong LEE   45: 1:36   40-44W  KOR (KR)   1480     34
+  35    693                Yuki OHAMA   45: 8:36   40-44W  JPN (JP)   1496     35
+  36   1124         Virginie CHEVRIOT   45:41:47   40-44W  FRA (FR)   1612     36
+  37   1171          Vanessa RONCHAUD   45:42:14   40-44W  FRA (FR)   1615     37
+  38   1763       Kwai Fuk Jessica NG   46: 9:48   40-44W  HKG (HK)   1686     38
+  39   1459              Fumika SAITO   46:18: 4   40-44W  JPN (JP)   1706     39
+  40    995          Kimberley CAVILL   46:22:20   40-44W  GBR (GB)   1725     40
+  41     54             Luzia BUEHLER  100: 0: 0   40-44W  SUI (CH)   9999   9999
+  42     61                  Aroa SIO  100: 0: 0   40-44W  ESP (ES)   9999   9999
+  43     85               Emma POOLEY  100: 0: 0   40-44W  SUI (CH)   9999   9999
+  44    155           Mariya NIKOLOVA  100: 0: 0   40-44W  BUL (BG)   9999   9999
+  45    161           Johanna BYGDELL  100: 0: 0   40-44W  SWE (SE)   9999   9999
+  46    226         Amandine GINOUVES  100: 0: 0   40-44W  FRA (FR)   9999   9999
+  47    237             Serpil BAYSAL  100: 0: 0   40-44W  TUR (TR)   9999   9999
+  48    654                Kertu PALO  100: 0: 0   40-44W  USA (US)   9999   9999
+  49    934             Jennifer ROSS  100: 0: 0   40-44W  GBR (GB)   9999   9999
+  50    979              Rhoda CHEUNG  100: 0: 0   40-44W  HKG (HK)   9999   9999
+  51   1147            Nadege BAILLET  100: 0: 0   40-44W  FRA (FR)   9999   9999
+  52   1202           Sophie COURTINE  100: 0: 0   40-44W  FRA (FR)   9999   9999
+  53   1464     Luciana ALVES BATISTA  100: 0: 0   40-44W  BRA (BR)   9999   9999
+  54   1586          Luisa CAMPREGHER  100: 0: 0   40-44W  ITA (IT)   9999   9999
+  55   1610            Jolijn MULDERS  100: 0: 0   40-44W  NED (NL)   9999   9999
+  56   1892    Vanesa MARTÍNEZ HANSEN  100: 0: 0   40-44W  ESP (ES)   9999   9999
+  57   1958          Luckana PHOMSORN  100: 0: 0   40-44W  THA (TH)   9999   9999
+  58   2243          Monica JOHANSSON  100: 0: 0   40-44W  SWE (SE)   9999   9999
+  59   2244               Noriko SATO  100: 0: 0   40-44W  JPN (JP)   9999   9999
+  60   2319     Brenda Lian Geok FONG  100: 0: 0   40-44W  SGP (SG)   9999   9999
+  61   2696              Nayla CORTAS  100: 0: 0   40-44W  LBN (LB)   9999   9999
+  62   2791              Sze Wun WONG  100: 0: 0   40-44W  HKG (HK)   9999   9999
+  63   2818             Chung Yan HUI  100: 0: 0   40-44W  HKG (HK)   9999   9999
+
+Todos os atletas coreanos, de qualquer escalão: 
+     Dorsal                      Nome  TempoMeta  Escalão      País PosAbs PosEsc
+   1    173                  Jisu KIM   27: 9:16   45-49M  KOR (KR)     78      4
+   2   1179                Wonbin LIM   34:25:30   45-49M  KOR (KR)    378     50
+   3   1268               Sehwan JEON   37:32:57   50-54M  KOR (KR)    609     52
+   4   1778               Bongjae KIM   41:39:38   40-44M  KOR (KR)   1035    246
+   5   2074                Songho YOO   42:34:45   50-54M  KOR (KR)   1133    146
+   6    880              Sungjae PARK   44:34:42   20-34M  KOR (KR)   1417    195
+   7   1084             Yoonjeong LEE   45: 1:36   40-44W  KOR (KR)   1480     34
+   8   2167              Jonghee HONG   46: 1: 3   60-64M  KOR (KR)   1655     24
+   9   2320               Youngok CHA   46: 1: 8   50-54W  KOR (KR)   1656     20
+  10   2272              Young Ha KIM   46: 9:22   20-34M  KOR (KR)   1682    209
+  11   2561             Seung Woo SUH   46: 9:23   60-64M  KOR (KR)   1683     25
+  12    326                Jaeduk SIM  100: 0: 0   50-54M  KOR (KR)   9999   9999
+  13    357              Dongkuk JANG  100: 0: 0   45-49M  KOR (KR)   9999   9999
+  14    449              Junghyun LIM  100: 0: 0   35-39M  KOR (KR)   9999   9999
+  15    704          Hyun Chang CHUNG  100: 0: 0   50-54M  KOR (KR)   9999   9999
+  16    813              Youngsun KIM  100: 0: 0   50-54W  KOR (KR)   9999   9999
+  17   1201                  Been LEE  100: 0: 0   35-39W  KOR (KR)   9999   9999
+  18   1458               Miyeong LEE  100: 0: 0   45-49W  KOR (KR)   9999   9999
+  19   1590              Taegyeom LEE  100: 0: 0   35-39M  KOR (KR)   9999   9999
+  20   1798                 Kahee KIM  100: 0: 0   35-39W  KOR (KR)   9999   9999
+  21   2350             Gunheung PARK  100: 0: 0   55-59M  KOR (KR)   9999   9999
+  22   2435                Sangdo KIM  100: 0: 0   55-59M  KOR (KR)   9999   9999
+  23   2509            Pyongkyun PARK  100: 0: 0   55-59M  KOR (KR)   9999   9999
+  24   2538             Jeongseop LEE  100: 0: 0   40-44M  KOR (KR)   9999   9999
+  25   2549             Kil Yeong KIM  100: 0: 0   60-64M  KOR (KR)   9999   9999
+  26   2583               Yonggook JO  100: 0: 0   50-54M  KOR (KR)   9999   9999
+  27   2637             Moon Hwan KIM  100: 0: 0   45-49M  KOR (KR)   9999   9999
+
+Todas as mulheres francesas de 40 a 44 anos: 
+     Dorsal                      Nome  TempoMeta  Escalão      País PosAbs PosEsc
+   1    261              Helene LEGER   36:29: 6   40-44W  FRA (FR)    529     11
+   2    794            Laure GAUTHIER   37:21:47   40-44W  FRA (FR)    594     15
+   3    772              Alice FABIEN   37:24:54   40-44W  FRA (FR)    598     16
+   4   1124         Virginie CHEVRIOT   45:41:47   40-44W  FRA (FR)   1612     36
+   5   1171          Vanessa RONCHAUD   45:42:14   40-44W  FRA (FR)   1615     37
+   6    226         Amandine GINOUVES  100: 0: 0   40-44W  FRA (FR)   9999   9999
+   7   1147            Nadege BAILLET  100: 0: 0   40-44W  FRA (FR)   9999   9999
+   8   1202           Sophie COURTINE  100: 0: 0   40-44W  FRA (FR)   9999   9999
