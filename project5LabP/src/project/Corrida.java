@@ -1,5 +1,12 @@
 package project;
 
+/**
+ * Classe que representa uma corrida.
+ * 
+ * @author Rodrigo Afonso (61839)
+ * @version 1.0
+ */
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
@@ -51,6 +58,15 @@ public class Corrida {
     // por ordem crescente de tempo de passagem.
     private final RegistoPassagem[][] registosPassagem;
     
+    /**
+     * Construtor de uma corrida a partir de ficheiros de texto com os dados dos atletas, das passagens nos postos de controlo
+     * e das classificações finais.
+     * 
+     * @param ficheiroListaAtletas nome do ficheiro com a lista de atletas
+     * @param ficheiroClassificacoes nome do ficheiro com as classificações finais
+     * @param ficheiroRegistoPassagens nome do ficheiro com os registos de passagem nos postos de controlo
+     * @throws FileNotFoundException se algum dos ficheiros não for encontrado
+     */
     public Corrida(String ficheiroListaAtletas, String ficheiroClassificacoes, String ficheiroRegistoPassagens)
     throws FileNotFoundException {
         this.atletas = lerFicheiroListaAtletas(ficheiroListaAtletas);
@@ -59,12 +75,25 @@ public class Corrida {
         lerFicheiroClassificacoes(ficheiroClassificacoes);
     }
     
+    /**
+     * Ordena os registos de passagem de cada posto de controlo por ordem crescente de tempo de passagem.
+     * 
+     * @param vec matriz de registos de passagem, onde cada linha corresponde a um posto de controlo
+     * @param comparador comparador de registos de passagem por tempo
+     */
     public static void ordenaPorPassagemDeTempo(RegistoPassagem[][] vec, ComparaRegistoPassagemTempo comparador) {
         for (RegistoPassagem[] posto : vec) {
             Arrays.sort(posto, comparador);
         }
     }
     
+    /**
+     * Lê um ficheiro de texto com a lista de atletas e cria um array de atletas com os dados lidos.
+     * 
+     * @param ficheiroListaAtletas nome do ficheiro com a lista de atletas
+     * @return array de atletas com os dados lidos
+     * @throws FileNotFoundException se o ficheiro não for encontrado
+     */
     private static Atleta[] lerFicheiroListaAtletas(String ficheiroListaAtletas)
     throws FileNotFoundException {
         Scanner sc = new Scanner(new File(ficheiroListaAtletas));
@@ -85,6 +114,12 @@ public class Corrida {
         return atletasList.toArray(atletas);
     }
     
+    /**
+     * Lê um ficheiro de texto com as classificações finais e atualiza os dados dos atletas com essas classificações.
+     * 
+     * @param ficheiroClassificacoes nome do ficheiro com as classificações finais
+     * @throws FileNotFoundException se o ficheiro não for encontrado
+     */
     private void lerFicheiroClassificacoes(String ficheiroClassificacoes)
     throws FileNotFoundException {
         Scanner sc = new Scanner(new File(ficheiroClassificacoes));
@@ -128,6 +163,14 @@ public class Corrida {
         sc.close();
     }
     
+    /**
+     * Lê um ficheiro de texto com os registos de passagem nos postos de controlo e cria uma matriz de
+     * registos de passagem com os dados lidos.
+     * 
+     * @param ficheiroRegistoPassagens nome do ficheiro com os registos de passagem nos postos de controlo
+     * @return matriz de registos de passagem com os dados lidos
+     * @throws FileNotFoundException se o ficheiro não for encontrado
+     */
     private RegistoPassagem[][] lerFicheiroRegistoPassagens(String ficheiroRegistoPassagens)
     throws FileNotFoundException {
                 Scanner sc = new Scanner(new File(ficheiroRegistoPassagens));
@@ -180,26 +223,58 @@ public class Corrida {
                 return Arrays.copyOf(registoPassagem, registoPassagem.length);
             }
     
+    /**
+     * Retorna o array de atletas da corrida atual.
+     * 
+     * @return o array de atletas da corrida atual
+     */
     public Atleta[] getAtletas() {
         return Arrays.copyOf(atletas, atletas.length);
     }
     
+    /**
+     * Retorna o atleta com um dado índice da array de atletas.
+     * 
+     * @param indice o índice do atleta a procurar
+     * @return o atleta com o índice dado
+     */
     public Atleta getAtletaPorIndice(int indice) {
         return atletas[indice];
     }
     
+    /**
+     * Retorna a array de registos de passagem da corrida atual.
+     * 
+     * @return a array de registos de passagem da corrida atual
+     */
     public RegistoPassagem[][] getRegistosPassagem() {
         return Arrays.copyOf(registosPassagem, registosPassagem.length);
     }
     
+    /**
+     * Retorna o número de atletas que participaram na corrida.
+     * 
+     * @return o número de atletas que participaram na corrida
+     */
     public int getNumeroDeAtletas() {
         return atletas.length;
     }
     
+    /**
+     * Retorna o número de postos de controlo da corrida.
+     * 
+     * @return o número de postos de controlo da corrida
+     */
     public int getNumeroPostosControlo() {
         return registosPassagem.length;
     }
     
+    /**
+     * Calcula as posiºões de um atleta com dada dorsal em todos os postos de controlo.
+     * 
+     * @param dorsal o dorsal do atleta
+     * @return um array com as posições do atleta em todos os postos de controlo
+     */
     public int[] calculaPosicoesPostos(int dorsal) {
         int[] posicoes = new int[getNumeroPostosControlo()];
         for (int posto = 0; posto < getNumeroPostosControlo(); posto++) {
@@ -208,6 +283,11 @@ public class Corrida {
         return Arrays.copyOf(posicoes, posicoes.length);
     }
     
+    /**
+     * Cria um gráfico comparativo com as posições de todos os atletas dentro da array em todos os postos de controlo.
+     * 
+     * @param vec a array de atletas a comparar
+     */
     public void plotPosicoesPostos(Atleta[] vec) {
         double[] postos = new double[getNumeroPostosControlo()];
         XYDataset[] dataset = new XYDataset[vec.length];
@@ -230,29 +310,34 @@ public class Corrida {
         XYPlotter.showXYPlot("Comparação de atletas", "Postos", "Posições", dataset);
     }
 
+    /**
+     * Cria um gráfico comparativo com as posições de todos os atletas com dadas dorsais dentro da array em todos os postos de controlo.
+     * 
+     * @param dorsais a array de dorsais a comparar
+     */
     public void plotPosicoesPostos(int[] dorsais) {
-//        Atleta[] vec= new Atleta[dorsais.length];
-//        double[] postos = new double[getNumeroPostosControlo()];
-//        XYDataset[] dataset = new XYDataset[vec.length];
-//        double[] posicoesDataset = new double[getNumeroPostosControlo()];
-//        
-//        
-//        for (int i  = 0; i < getNumeroPostosControlo(); i++) {
-//            postos[i] = i+1;
-//        }
-//        
-//        for (int j = 0; j < vec.length; j++) {
-//            Atleta atletaDorsalToComp = new Atleta(dorsais[j], "name", "pt", "0");
-//            vec[j] = atletas[Arrays.binarySearch(vec, atletaDorsalToComp, new ComparaAtletaDorsal())];
-//            int[] posicoesPostos = calculaPosicoesPostos(vec[j].getDorsal());
-//            
-//            for (int k = 0; k < getNumeroPostosControlo(); k++) {
-//                posicoesDataset[k] = posicoesPostos[k];
-//            }
-//            
-//            dataset[j] = XYPlotter.createDataset("Atleta " + vec[j].getDorsal(), Arrays.copyOf(postos, postos.length), Arrays.copyOf(posicoesDataset, posicoesDataset.length));
-//        }
-//        
-//        XYPlotter.showXYPlot("Comparação de atletas", "Postos", "Posições", dataset);
+        Atleta[] vec= new Atleta[dorsais.length];
+        double[] postos = new double[getNumeroPostosControlo()];
+        XYDataset[] dataset = new XYDataset[vec.length];
+        double[] posicoesDataset = new double[getNumeroPostosControlo()];
+        
+        
+        for (int i  = 0; i < getNumeroPostosControlo(); i++) {
+            postos[i] = i+1;
+        }
+        
+        for (int j = 0; j < vec.length; j++) {
+            Atleta atletaDorsalToComp = new Atleta(dorsais[j], "name", "pt", "0");
+            vec[j] = atletas[Arrays.binarySearch(atletas, atletaDorsalToComp, new ComparaAtletaDorsal())];
+            int[] posicoesPostos = calculaPosicoesPostos(vec[j].getDorsal());
+            
+            for (int k = 0; k < getNumeroPostosControlo(); k++) {
+                posicoesDataset[k] = posicoesPostos[k];
+            }
+            
+            dataset[j] = XYPlotter.createDataset("Atleta " + vec[j].getDorsal(), Arrays.copyOf(postos, postos.length), Arrays.copyOf(posicoesDataset, posicoesDataset.length));
+        }
+        
+        XYPlotter.showXYPlot("Comparação de atletas", "Postos", "Posições", dataset);
     }
 }
